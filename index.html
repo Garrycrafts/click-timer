@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Key Hold + Reaction Trainer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <h1>Key Hold + Reaction Trainer</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Hold + Reaction Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Key Hold + Reaction Trainer</h1>
 
-    <fieldset>
-      <legend>Settings</legend>
-      <label for="mode">Mode:</label>
-      <select id="mode">
-        <option value="manual">Manual (Original)</option>
-        <option value="drill">Reaction Drill</option>
-      </select><br>
+      <fieldset>
+        <legend>Settings</legend>
+        <label for="mode">Mode:</label>
+        <select id="mode">
+          <option value="manual">Manual (Original)</option>
+          <option value="drill">Reaction Drill</option></select
+        ><br />
 
-      <label for="key">Choose an input (manual only):</label>
-      <select id="key">
-        <option value="KeyF">F</option>
-        <option value="KeyQ">Q</option>
-        <option value="KeyE">E</option>
-        <option value="KeyW">W</option>
-        <option value="KeyA">A</option>
-        <option value="KeyS">S</option>
-        <option value="KeyD">D</option>
-        <option value="KeyT">T</option>
-        <option value="Backspace">Backspace</option>
-        <option value="Space">Spacebar</option>
-        <option value="LeftClick">Left Click</option>
-        <option value="RightClick">Right Click</option>
-      </select><br>
+        <label for="key">Choose an input (manual only):</label>
+        <select id="key">
+          <option value="KeyF">F</option>
+          <option value="KeyQ">Q</option>
+          <option value="KeyE">E</option>
+          <option value="KeyW">W</option>
+          <option value="KeyA">A</option>
+          <option value="KeyS">S</option>
+          <option value="KeyD">D</option>
+          <option value="KeyT">T</option>
+          <option value="Backspace">Backspace</option>
+          <option value="Space">Spacebar</option>
+          <option value="LeftClick">Left Click</option>
+          <option value="RightClick">Right Click</option></select
+        ><br />
 
-      <label for="duration">Target hold time (seconds):</label>
-      <input type="number" id="duration" value="3" min="0.5" max="30" step="0.1"><br>
+        <label for="duration">Target hold time (seconds):</label>
+        <input
+          type="number"
+          id="duration"
+          value="3"
+          min="0.5"
+          max="30"
+          step="0.1"
+        /><br />
 
-      <!-- Adjustable reaction window start; buffer fixed at 1s -->
-      <label for="window-min">Reaction window start (sec, drill only):</label>
-      <input type="number" id="window-min" value="1" min="0.1" max="10" step="0.1"><br>
+        <!-- Adjustable reaction window start; buffer fixed at 1s -->
+        <label for="window-min">Reaction window start (sec, drill only):</label>
+        <input
+          type="number"
+          id="window-min"
+          value="1"
+          min="0.1"
+          max="10"
+          step="0.1"
+        /><br />
 
-      <small>Buffer fixed at 1s (so window end = start + 1s)</small><br>
-      <button onclick="startTrainer()">Start</button> 
-    </fieldset>
+        <small>Buffer fixed at 1s (so window end = start + 1s)</small><br />
+        <button onclick="startTrainer()">Start</button>
+      </fieldset>
 
-    <div class="instruction" id="instruction">Choose mode and start</div>
-    <div class="progress-container">
-      <div id="progress-bar"></div>
-    </div>
-    <div class="feedback" id="feedback"></div>
-  </main>
+      <div class="instruction" id="instruction">Choose mode and start</div>
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="feedback" id="feedback"></div>
+    </main>
 
-
-  <script src="Jindex.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
