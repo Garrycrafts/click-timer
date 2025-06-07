@@ -120,7 +120,7 @@ function success(duration) {
 
 function fail(reason) {
   drillActive = false;
-  D;
+  // D;
   clearTimeout(reactionTimeout);
   cancelAnimationFrame(animationFrame);
   document.getElementById(
